@@ -1,0 +1,35 @@
+示例代码，没有用到springmvc
+
+public void addNews(News news) {
+		String columnId = news.getColumnId();
+		String userId = news.getUserId();
+		String newsTitle = news.getNewsTitle();
+		String newsContent = news.getNewsContent();
+		Date newsDate = new Date();
+		String sql = "INSERT INTO news (column_id, user_id, news_title, news_content, news_date) VALUES (?, ?, ?, ?, ?)";
+		Object[] params = {columnId, userId, newsTitle, newsContent, newsDate};
+		try {
+			insert(sql, params);
+		} catch (SQLException e) {
+			System.out.println("增添新闻失败");
+			e.printStackTrace();
+		}		
+	}
+	
+	
+	
+	public void addNews(News news) {
+    		String columnId = news.getColumnId();
+    		String userId = news.getUserId();
+    		String newsTitle = news.getNewsTitle();
+    		String newsContent = news.getNewsContent();
+    		Date newsDate = new Date();
+    		String sql = "INSERT INTO news (column_id, user_id, news_title, news_content, news_date) VALUES (?, ?, ?, ?, ?)";
+    		Object[] params = {columnId, userId, newsTitle, newsContent, newsDate};
+    		try {
+    			insert(sql, params);
+    		} catch (SQLException e) {
+    			System.out.println("增添新闻失败");
+    			e.printStackTrace();
+    		}		
+    	}
