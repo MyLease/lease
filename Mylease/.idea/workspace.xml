@@ -1,42 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bb987f01-0c61-48a9-8d5c-4a61250b9cb1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_3_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_3_8_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/com/mcmc/common/core/AbstractDao.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/com/mcmc/common/core/ExpandBeanHandler.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/com/mcmc/common/core/ExpandBeanListHandler.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/com/mcmc/common/core/ServiceExtends.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/com/mcmc/common/entity/credit.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/com/mcmc/common/entity/deliveryAddress.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/com/mcmc/common/entity/dynamic.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/com/mcmc/common/entity/dynamicReply.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/com/mcmc/common/entity/goods.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/com/mcmc/common/entity/goodsComment.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/com/mcmc/common/entity/image.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/com/mcmc/common/entity/order.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/com/mcmc/common/entity/paramCity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/com/mcmc/common/entity/paramProvince.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/com/mcmc/common/entity/shoppingCart.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/com/mcmc/common/entity/user.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/com/mcmc/common/utils/AbstractFilter.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/com/mcmc/common/utils/ConnectionPool.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/com/mcmc/common/utils/setCharFilter.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/com/mcmc/controller/示例代码" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/com/mcmc/dao/示例" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/com/mcmc/service/示例代码" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/Mylease_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/Mylease_war_exploded.xml" />
+    <list default="true" id="bb987f01-0c61-48a9-8d5c-4a61250b9cb1" name="Default" comment="修复框架">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/lease/WEB-INF/classes/com/mcmc/common/core/AbstractDao.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/lease/WEB-INF/classes/com/mcmc/common/core/ServiceExtends.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/lease/WEB-INF/classes/com/mcmc/common/entity/Credit.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/lease/WEB-INF/classes/com/mcmc/common/entity/DeliveryAddress.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/lease/WEB-INF/classes/com/mcmc/common/entity/Dynamic.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/lease/WEB-INF/classes/com/mcmc/common/entity/DynamicReply.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/lease/WEB-INF/classes/com/mcmc/common/entity/Goods.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/lease/WEB-INF/classes/com/mcmc/common/entity/GoodsComment.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/lease/WEB-INF/classes/com/mcmc/common/entity/Image.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/lease/WEB-INF/classes/com/mcmc/common/entity/Order.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/lease/WEB-INF/classes/com/mcmc/common/entity/ParamCity.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/lease/WEB-INF/classes/com/mcmc/common/entity/ParamProvince.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/lease/WEB-INF/classes/com/mcmc/common/entity/ShoppingCart.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/lease/WEB-INF/classes/com/mcmc/common/entity/User.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/lease/WEB-INF/classes/com/mcmc/common/exception/ContextException.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/lease/WEB-INF/classes/com/mcmc/common/utils/AbstractFilter.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/lease/WEB-INF/classes/com/mcmc/common/utils/BeanToJson.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/lease/WEB-INF/classes/com/mcmc/common/utils/ConnectionPool.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/lease/WEB-INF/classes/com/mcmc/common/utils/PageBean.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/lease/WEB-INF/classes/com/mcmc/common/utils/setCharFilter.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/lease/WEB-INF/classes/com/mcmc/controller/AbstractController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/lease/WEB-INF/classes/com/mcmc/controller/JSONController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/lease/WEB-INF/lib/c3p0-0.9.1.2.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/lease/WEB-INF/lib/commons-beanutils-1.8.0.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/lease/WEB-INF/lib/commons-collections-3.2.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/lease/WEB-INF/lib/commons-dbutils-1.7.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/lease/WEB-INF/lib/commons-fileupload-1.3.3.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/lease/WEB-INF/lib/commons-io-2.2.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/lease/WEB-INF/lib/commons-lang-2.5.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/lease/WEB-INF/lib/commons-logging-1.2.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/lease/WEB-INF/lib/ezmorph-1.0.6.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/lease/WEB-INF/lib/jackson-annotations-2.5.4.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/lease/WEB-INF/lib/jackson-core-2.5.4.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/lease/WEB-INF/lib/jackson-databind-2.5.4.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/lease/WEB-INF/lib/json-lib-2.4-jdk15.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/lease/WEB-INF/lib/jstl-1.2.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/lease/WEB-INF/lib/mysql-connector-java-5.1.38.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/lease/WEB-INF/lib/spring-aop-4.3.9.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/lease/WEB-INF/lib/spring-beans-4.3.9.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/lease/WEB-INF/lib/spring-context-4.3.9.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/lease/WEB-INF/lib/spring-core-4.3.9.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/lease/WEB-INF/lib/spring-expression-4.3.9.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/lease/WEB-INF/lib/spring-jdbc-4.3.9.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/lease/WEB-INF/lib/spring-tx-4.3.9.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/lease/WEB-INF/lib/spring-web-4.3.9.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/lease/WEB-INF/lib/spring-webmvc-4.3.9.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/lease/WEB-INF/lib/standard-1.1.2.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_8_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_dbutils_commons_dbutils_1_7.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_5.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_ezmorph_ezmorph_1_0_6.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_json_lib_json_lib_jdk15_2_4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_5.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_7_5.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/mcmc/common/core/AbstractDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/mcmc/common/core/Assert.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/mcmc/common/core/ExpandBeanHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/mcmc/common/core/ExpandBeanListHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/mcmc/common/core/ServiceExtends.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/mcmc/common/entity/Credit.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/mcmc/common/entity/DeliveryAddress.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/mcmc/common/entity/Dynamic.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/mcmc/common/entity/DynamicReply.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/mcmc/common/entity/Goods.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/mcmc/common/entity/GoodsComment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/mcmc/common/entity/Image.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/mcmc/common/entity/Order.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/mcmc/common/entity/ParamCity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/mcmc/common/entity/ParamProvince.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/mcmc/common/entity/ShoppingCart.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/mcmc/common/entity/User.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/mcmc/common/exception/ContextException.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/mcmc/common/utils/AbstractFilter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/mcmc/common/utils/BeanToJson.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/mcmc/common/utils/ConnectionPool.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/mcmc/common/utils/PageBean.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/mcmc/common/utils/setCharFilter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/mcmc/controller/AbstractController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/mcmc/controller/JSONController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/mcmc/controller/示例代码" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/mcmc/dao/示例" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/mcmc/service/示例代码" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/log4j.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/lease/META-INF/MANIFEST.MF" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/lease/WEB-INF/classes/bean.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/lease/WEB-INF/classes/db.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/lease/WEB-INF/classes/springmvc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/lease/WEB-INF/views/视图层" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/lease/WEB-INF/web.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/lease/index.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Mylease.iml" afterPath="$PROJECT_DIR$/Mylease.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/bean.xml" afterPath="$PROJECT_DIR$/src/main/resources/bean.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/springmvc.xml" afterPath="$PROJECT_DIR$/src/main/resources/springmvc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/bean.xml" afterPath="$PROJECT_DIR$/target/classes/bean.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/springmvc.xml" afterPath="$PROJECT_DIR$/target/classes/springmvc.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -65,11 +126,10 @@
       <file leaf-file-name="AbstractController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/mcmc/controller/AbstractController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1463">
-              <caret line="7" column="32" lean-forward="false" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+            <state relative-caret-position="491">
+              <caret line="163" column="24" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="881" selection-end-column="0" />
               <folding>
-                <element signature="e#1854#1862#0" expanded="true" />
-                <marker date="1507537729566" expanded="false" signature="19712:19728" ph="&lt;~&gt;" />
+                <marker date="1507808947186" expanded="false" signature="21231:21247" ph="&lt;~&gt;" />
               </folding>
             </state>
           </provider>
@@ -320,6 +380,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -465,6 +526,40 @@
               <option name="myItemId" value="common" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lease" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Mylease" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mcmc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -503,11 +598,10 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.general" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -1044,12 +1138,22 @@
       <workItem from="1506587374631" duration="1651000" />
       <workItem from="1507537072530" duration="36000" />
       <workItem from="1507537464414" duration="358000" />
-      <workItem from="1507541341266" duration="22000" />
+      <workItem from="1507541341266" duration="1795000" />
+      <workItem from="1507642387595" duration="9000" />
+      <workItem from="1507808591776" duration="524000" />
     </task>
+    <task id="LOCAL-00001" summary="修复框架">
+      <created>1507541392064</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1507541392064</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34012000" />
+    <option name="totallyTimeSpent" value="36318000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1082,11 +1186,11 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32902467" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40308747" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32867134" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40308747" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32902467" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32902467" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33812407" sideWeight="0.4958872" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34871408" sideWeight="0.4958872" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23283261" sideWeight="0.5041128" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23283261" sideWeight="0.5041128" order="2" side_tool="true" content_ui="tabs" />
@@ -1104,6 +1208,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="修复框架" />
+    <option name="LAST_COMMIT_MESSAGE" value="修复框架" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1289,7 +1397,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="491">
           <caret line="37" column="5" lean-forward="false" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1377,14 +1484,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mcmc/common/utils/PageBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mcmc/common/utils/setCharFilter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
@@ -1418,13 +1517,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mcmc/common/utils/PageBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mcmc/controller/AbstractController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1463">
-          <caret line="7" column="32" lean-forward="false" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+        <state relative-caret-position="491">
+          <caret line="163" column="24" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="881" selection-end-column="0" />
           <folding>
-            <element signature="e#1854#1862#0" expanded="true" />
-            <marker date="1507537729566" expanded="false" signature="19712:19728" ph="&lt;~&gt;" />
+            <marker date="1507808947186" expanded="false" signature="21231:21247" ph="&lt;~&gt;" />
           </folding>
         </state>
       </provider>
