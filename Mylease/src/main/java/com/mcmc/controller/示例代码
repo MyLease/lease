@@ -1,0 +1,28 @@
+示例代码：此处应该用springMvc的写法
+
+@WebServlet(value=RequestConstant.USERMESSAGE_BACK_CONTROLLER)
+public class UserMessageBackController extends ControllerExtend {
+
+
+@RequestMapping(value=RequestConstant.DISPATCH_BACK_MESSAGE)
+	public void DispatchBackMessage() throws ServletException, IOException {
+		requestDispatcher(ViewUriConstant.BACK_PAGE);
+	}
+
+@RequestMapping(value=RequestConstant.AJAX_GET_BACK_MESSAGE1)
+	@ResponseBody
+	public void ajaxGetBackMessage() throws ServletException, IOException {
+		int currentPage = getInt("currentPage");
+		int size = 0;
+		List<UserMessageVo> list = new ArrayList<UserMessageVo>();
+		try {
+			list = userMessageService.selectAllMessage(currentPage);
+			size = userMessageService.selectAllPage();
+		} catch (ContextException e) {
+			logger.error(ControllerExceptionEnum.BackPageException.getInfo(),e);
+			to500(ControllerExceptionEnum.BackPageException.getInfo(), ViewUriConstant.ERROR500);
+		}
+		PageBean pageBean = new PageBean(size, list);
+		sendJson(pageBean);
+	}
+}
