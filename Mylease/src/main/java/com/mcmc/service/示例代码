@@ -1,7 +1,0 @@
-示例代码：套用Dao层，没有用到springmvc
-
-	public News selectOneNews(String id) {
-		News news = new News();
-		news = newsDao.selectOneNews(id);
-		return news;
-	}
