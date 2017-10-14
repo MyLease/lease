@@ -11,7 +11,7 @@
 
 	<div id="LoginBox">
 		<h1 class="row1">登录界面</h1>
-		<form class="form-horizontal col-md-12" role="form" method="post" action="UserController/login">
+		<form class="form-horizontal col-md-12" role="form" method="post" action="UserController/seeUser">
 			<div class="form-group">
 				<lable class="col-md-2 control-label">
 					学号：
