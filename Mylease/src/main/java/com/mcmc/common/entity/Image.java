@@ -1,6 +1,5 @@
 package com.mcmc.common.entity;
 
-import com.sun.xml.internal.ws.api.ha.StickyFeature;
 
 /**
  * Created by sunlei on 2017/9/2.
