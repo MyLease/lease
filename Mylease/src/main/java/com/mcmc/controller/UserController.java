@@ -3,10 +3,10 @@ package com.mcmc.controller;
 import com.mcmc.common.entity.User;
 import com.mcmc.dao.StudentDao;
 import com.mcmc.service.StudentService;
-import net.sf.json.JSONArray;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
@@ -37,14 +37,18 @@ public class UserController {
     }
 
     @RequestMapping("/seeUser")
-    public String selectAllUser(){
+    @ResponseBody
+    public List<User> lselectAllUser(){
         List<User> list = studentDao.selectAllUser();
         System.out.println(list.get(0).getPassword());
         //JSONObject json = new JSONObject();
         //json.put("allUser", list);
         //String json="{\"data\":" + JSONArray.fromObject(list) + "}";
-        String json="{"+JSONArray.fromObject(list) + "}";
-        return json;
+        //String json="{"+JSONArray.fromObject(list) + "}";
+        return list;
+//        JSONObject obj = new JSONObject();
+//        obj.put("list", list);
+//        return obj.toString();
 
     }
 }
