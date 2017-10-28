@@ -3,6 +3,10 @@ package com.mcmc.controller;
 import com.mcmc.common.entity.User;
 import com.mcmc.dao.StudentDao;
 import com.mcmc.service.StudentService;
+
+
+import net.sf.json.JSONObject;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -38,17 +42,31 @@ public class UserController {
 
     @RequestMapping("/seeUser")
     @ResponseBody
-    public List<User> lselectAllUser(){
-        List<User> list = studentDao.selectAllUser();
-        System.out.println(list.get(0).getPassword());
+
+//    public List<User> lselectAllUser(){
+//        List<User> list = studentDao.selectAllUser();
+//        System.out.println(list.get(0).getPassword());
         //JSONObject json = new JSONObject();
         //json.put("allUser", list);
         //String json="{\"data\":" + JSONArray.fromObject(list) + "}";
         //String json="{"+JSONArray.fromObject(list) + "}";
-        return list;
+//        return list;
 //        JSONObject obj = new JSONObject();
 //        obj.put("list", list);
 //        return obj.toString();
+    public JSONObject selectAllUser(){
+//        List<User> list = studentDao.selectAllUser();
+//        System.out.println(list.get(0).getPassword());
+        //JSONObject json = new JSONObject();
+        //json.put("allUser", list);
+        //String json="{\"data\":" + JSONArray.fromObject(list) + "}";
+//        String json="{"+JSONArray.fromObject(list) + "}";
+
+        JSONObject json = new JSONObject();
+        json.put("username","swillion");
+        json.put("password","123456");
+        return json;
+
 
     }
 }
