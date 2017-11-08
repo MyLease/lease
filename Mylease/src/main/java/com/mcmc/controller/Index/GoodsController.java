@@ -1,7 +1,9 @@
 package com.mcmc.controller.Index;
 
 import com.mcmc.common.entity.Goods;
+import com.mcmc.dao.goods.GoodsDao;
 import com.mcmc.service.goods.GoodsService;
+import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,10 +25,19 @@ public class GoodsController {
      *查询所有==租赁商品，返回json
      * @return
      */
-    @RequestMapping("/selectAllLeaseGoods")
+    //@RequestMapping("/selectAllLeaseGoods")
     @ResponseBody
+    /**
     public List<Goods> selectAllLeaseGoods(){
         List<Goods> list = goodsService.sellectAllLeaseGoods();
         return list;
+    }
+     **/
+    @RequestMapping("/selectAllLeaseGoods")
+    public JSONObject selectAllLeaseGoods(){
+        List<Goods> list=goodsService.sellectAllLeaseGoods();
+        JSONObject json = new JSONObject();
+        json.put("allGoods", list);
+        return json;
     }
 }
