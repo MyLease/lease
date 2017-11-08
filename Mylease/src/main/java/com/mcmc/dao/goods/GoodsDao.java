@@ -32,8 +32,6 @@ public class GoodsDao {
      */
 
     public List<Goods> selectAllLeaseGoods() {
-        ApplicationContext ctx=new ClassPathXmlApplicationContext("bean.xml");
-        JdbcTemplate jdbcTemplate=(JdbcTemplate) ctx.getBean("jdbcTemplate");
         String sql = "SELECT * FROM goods WHERE goods.goods_deal_type = '1' AND goods.can_show = '1' ORDER BY goods.business_num ASC LIMIT 0,10";
         RowMapper<Goods> rowMapper = new BeanPropertyRowMapper<Goods>(Goods.class);
         List<Goods> list = null;

@@ -35,7 +35,6 @@ public class GoodsController {
      **/
     @RequestMapping("/selectAllLeaseGoods")
     public JSONObject selectAllLeaseGoods(){
-        //GoodsDao goodsDao=new GoodsDao();
         List<Goods> list=goodsService.sellectAllLeaseGoods();
         JSONObject json = new JSONObject();
         json.put("allGoods", list);

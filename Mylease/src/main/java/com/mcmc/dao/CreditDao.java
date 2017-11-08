@@ -22,14 +22,10 @@ public class CreditDao {
     public void addCredit(Credit credits) throws SQLException{
         ApplicationContext ctx=new ClassPathXmlApplicationContext("bean.xml");
         JdbcTemplate jdbcTemplate=(JdbcTemplate) ctx.getBean("jdbcTemplate");
-/**
+
         String id=credits.getId();
         String userId=credits.getUserId();
         int credit=credits.getCredit();
- **/
-        String id="1";
-        String userId="22";
-        int credit=5;
 
         String sql="INSERT INTO credit (id, user_id, credit) VALUES (?, ?, ?)";
         Object[] params={id, userId, credit};
@@ -40,14 +36,10 @@ public class CreditDao {
     public void updateCreditByUserId(Credit credits) throws SQLException{
         ApplicationContext ctx=new ClassPathXmlApplicationContext("bean.xml");
         JdbcTemplate jdbcTemplate=(JdbcTemplate) ctx.getBean("jdbcTemplate");
-/**
+
         String id=credits.getId();
         String userId=credits.getUserId();
         int credit=credits.getCredit();
- **/
-        String id="1";
-        String userId="22";
-        int credit=20;
 
         String sql="UPDATE credit SET credit=? where user_id=?";
         Object[] params={credit, userId};
@@ -78,8 +70,6 @@ public class CreditDao {
         JdbcTemplate jdbcTemplate=(JdbcTemplate) ctx.getBean("jdbcTemplate");
 
         String sql="delete from credit where user_id=?";
-        userId="22";
-        //String id=user.getId();
 
         int count= jdbcTemplate.update(sql, userId);
         System.out.println(count);

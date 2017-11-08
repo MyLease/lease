@@ -22,14 +22,10 @@ public class DeliveryAddressDao {
     public void addDeliveryAddress(DeliveryAddress deliveryAddress) throws SQLException{
         ApplicationContext ctx=new ClassPathXmlApplicationContext("bean.xml");
         JdbcTemplate jdbcTemplate=(JdbcTemplate) ctx.getBean("jdbcTemplate");
-/**
+
         String id=deliveryAddress.getId();
         String userId=deliveryAddress.getUserId();
-        String deliveryAddress=deliveryAddress.getDeliveryAddress();
- **/
-        String id="1";
-        String userId="1";
-        String deliverAddress="山东省潍坊市坊子区凤凰街办盛世虞河湾";
+        String deliverAddress=deliveryAddress.getDeliveryAddress();
 
         String sql="INSERT INTO delivery_address (id, user_id, delivery_address) VALUES (?, ?, ?)";
         Object[] params={id, userId, deliverAddress};
@@ -41,15 +37,15 @@ public class DeliveryAddressDao {
     public void updateDeliveryAddress(DeliveryAddress deliveryAddress) throws SQLException{
         ApplicationContext ctx=new ClassPathXmlApplicationContext("bean.xml");
         JdbcTemplate jdbcTemplate=(JdbcTemplate) ctx.getBean("jdbcTemplate");
-/**
+
         String id=deliveryAddress.getId();
         String userId=deliveryAddress.getUserId();
-        String deliveryAddress=deliveryAddress.getDeliveryAddress();
- **/
+        String deliverAddress=deliveryAddress.getDeliveryAddress();
+ /**
         String id="1";
         String userId="2";
         String deliverAddress="潍坊市坊子区凤凰街办盛世虞河湾";
-
+**/
         String sql="UPDATE delivery_address SET user_id=?, delivery_address=? where id=?";
         Object[] params={userId, deliverAddress, id};
         int count= jdbcTemplate.update(sql, params);
@@ -65,7 +61,7 @@ public class DeliveryAddressDao {
         RowMapper<DeliveryAddress> rowMapper=new BeanPropertyRowMapper<DeliveryAddress>(DeliveryAddress.class);
         List<DeliveryAddress> list = null;
         try{
-            list = jdbcTemplate.query(sql,rowMapper,"2");
+            list = jdbcTemplate.query(sql,rowMapper,userId);
             System.out.println(list);
         }catch (EmptyResultDataAccessException e){
             System.out.println("Select Failed ");
@@ -78,7 +74,7 @@ public class DeliveryAddressDao {
         JdbcTemplate jdbcTemplate=(JdbcTemplate) ctx.getBean("jdbcTemplate");
 
         String sql="DELETE FROM delivery_address WHERE id=?";
-        id="2";
+        //id="2";
 
         int count=jdbcTemplate.update(sql,id);
         System.out.println(count);

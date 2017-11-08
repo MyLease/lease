@@ -1,9 +1,10 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML PUBLIC >
+
 <html>
 
 <head>
-	<meta charset="utf-8">
+	<meta charset="UTF-8">
 	<title>登录</title>
 </head>
 
@@ -11,7 +12,7 @@
 
 	<div id="LoginBox">
 		<h1 class="row1">登录界面</h1>
-		<form class="form-horizontal col-md-12" role="form" method="post" action="UserController/seeUser">
+		<form class="form-horizontal col-md-12" role="form" method="post" action="UserController/login">
 			<div class="form-group">
 				<lable class="col-md-2 control-label">
 					学号：

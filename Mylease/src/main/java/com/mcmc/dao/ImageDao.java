@@ -22,19 +22,19 @@ public class ImageDao {
     public void addImage(Image image) throws SQLException {
         ApplicationContext ctx=new ClassPathXmlApplicationContext("bean.xml");
         JdbcTemplate jdbcTemplate=(JdbcTemplate) ctx.getBean("jdbcTemplate");
-/**
+
         String id=image.getId();
         String goodsId=image.getGoodsId();
         String goodsCommentId=image.getGoodsCommentId();//对应评论id
         String dynamicId=image.getDynamicId();//对应动态id
         String imgPath=image.getImgPath();//照片路径
- **/
+/**
         String id="2";
         String goodsId="2";
         String goodsCommentId="3";//对应评论id
         String dynamicId="4";//对应动态id
         String imgPath="D:\\Baofeng\\PhoneAssistant\\bfwebcore";//照片路径
-
+**/
         String sql="INSERT INTO image (id, goods_id, goods_comment_id, dynamic_id, img_path) VALUES (?, ?, ?, ?, ?)";
         Object[] params={id, goodsId, goodsCommentId, dynamicId, imgPath};
         int count= jdbcTemplate.update(sql, params);
@@ -46,20 +46,18 @@ public class ImageDao {
         ApplicationContext ctx=new ClassPathXmlApplicationContext("bean.xml");
         JdbcTemplate jdbcTemplate=(JdbcTemplate) ctx.getBean("jdbcTemplate");
 
-        /**
          String id=image.getId();
          String goodsId=image.getGoodsId();
          String goodsCommentId=image.getGoodsCommentId();//对应评论id
          String dynamicId=image.getDynamicId();//对应动态id
          String imgPath=image.getImgPath();//照片路径
-         **/
-
+/**
         String id="2";
         String goodsId="22";
         String goodsCommentId="33";//对应评论id
         String dynamicId="44";//对应动态id
         String imgPath="kgh;agh;jgh;kgjh;gh;s";//照片路径
-
+**/
         String sql="UPDATE image SET goods_id=?, goods_comment_id=?, dynamic_id=?, img_path=? where id=?";
         Object[] params={goodsId, goodsCommentId, dynamicId, imgPath, id};
         int count= jdbcTemplate.update(sql, params);
@@ -127,7 +125,7 @@ public class ImageDao {
         RowMapper<Image> rowMapper=new BeanPropertyRowMapper<Image>(Image.class);
         List<Image> list = null;
         try{
-            list = jdbcTemplate.query(sql,rowMapper,"44");
+            list = jdbcTemplate.query(sql,rowMapper,dynamicId);
             System.out.println(list);
         }catch (EmptyResultDataAccessException e){
             System.out.println("Select Failed ");
@@ -140,8 +138,7 @@ public class ImageDao {
         JdbcTemplate jdbcTemplate=(JdbcTemplate) ctx.getBean("jdbcTemplate");
 
         String sql="delete from image where id=?";
-        id="2";
-        //String id=user.getId();
+        //id="2";
 
         int count= jdbcTemplate.update(sql, id);
         System.out.println(count);
@@ -152,8 +149,7 @@ public class ImageDao {
         JdbcTemplate jdbcTemplate = (JdbcTemplate) ctx.getBean("jdbcTemplate");
 
         String sql = "delete from image where goods_id=?";
-        goodsId = "2";
-        //String id=user.getId();
+        //goodsId = "2";
 
         int count = jdbcTemplate.update(sql, goodsId);
         System.out.println(count);
@@ -164,8 +160,7 @@ public class ImageDao {
         JdbcTemplate jdbcTemplate=(JdbcTemplate) ctx.getBean("jdbcTemplate");
 
         String sql="delete from image where goods_comment_id=?";
-        goodsCommentId="2";
-        //String id=user.getId();
+        //goodsCommentId="2";
 
         int count= jdbcTemplate.update(sql, goodsCommentId);
         System.out.println(count);
@@ -176,8 +171,7 @@ public class ImageDao {
         JdbcTemplate jdbcTemplate=(JdbcTemplate) ctx.getBean("jdbcTemplate");
 
         String sql="delete from image where dynamic_id=?";
-        dynamicId="2";
-        //String id=user.getId();
+        //dynamicId="2";
 
         int count= jdbcTemplate.update(sql, dynamicId);
         System.out.println(count);

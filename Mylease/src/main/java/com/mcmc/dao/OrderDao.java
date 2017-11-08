@@ -22,20 +22,21 @@ public class OrderDao {
     public void addOrder(Order order)throws SQLException{
         ApplicationContext ctx=new ClassPathXmlApplicationContext("bean.xml");
         JdbcTemplate jdbcTemplate=(JdbcTemplate) ctx.getBean("jdbcTemplate");
-/**
+
         String id=order.getId();
         String goodsId=order.getGoodsId();
         String userId=order.getUserId();
         int orderTimeLimit=order.getOrderTimeLimit();//交易时间限制
         String feightType=order.getFeightType();//运费支付类型 租方付、物品拥有者、面对面
         String orderType=order.getOrderType();//交易方式
- **/
+/**
         String id="2";
         String goodsId="2";
         String userId="3";
         int orderTimeLimit=33;//交易时间限制
         String feightType="2";//运费支付类型 租方付、物品拥有者、面对面
         String orderType="1";//交易方式
+ **/
 //order表名改为orders，order不能作为表名！！！
         String sql="INSERT INTO orders (id, goods_id, user_id, order_time_limit, feight_type, order_type) VALUES (?, ?, ?, ?, ?, ?)";
         Object[] params={id, goodsId, userId, orderTimeLimit, feightType, orderType};
@@ -48,20 +49,20 @@ public class OrderDao {
         ApplicationContext ctx=new ClassPathXmlApplicationContext("bean.xml");
         JdbcTemplate jdbcTemplate=(JdbcTemplate) ctx.getBean("jdbcTemplate");
 
-        /**
          String id=order.getId();
          String goodsId=order.getGoodsId();
          String userId=order.getUserId();
          int orderTimeLimit=order.getOrderTimeLimit();//交易时间限制
          String feightType=order.getFeightType();//运费支付类型 租方付、物品拥有者、面对面
          String orderType=order.getOrderType();//交易方式
-         **/
+/**
         String id="2";
         String goodsId="2";
         String userId="3";
         int orderTimeLimit=32;//交易时间限制
         String feightType="1";//运费支付类型 租方付、物品拥有者、面对面
         String orderType="2";//交易方式
+ **/
 //order表名改为orders，order不能作为表名！！！
         String sql="UPDATE orders SET goods_id=?, user_id=?, order_time_limit=?, feight_type=?, order_type=? where id=?";
         Object[] params={goodsId, userId, orderTimeLimit, feightType, orderType, id};
@@ -91,8 +92,7 @@ public class OrderDao {
         JdbcTemplate jdbcTemplate=(JdbcTemplate) ctx.getBean("jdbcTemplate");
 
         String sql="delete from orders where goods_id=?";
-        goodsId="1";
-        //String id=user.getId();
+        //goodsId="1";
 
         int count= jdbcTemplate.update(sql, goodsId);
         System.out.println(count);

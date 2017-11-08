@@ -25,7 +25,7 @@ public class UserDao {
         JdbcTemplate jdbcTemplate=(JdbcTemplate) ctx.getBean("jdbcTemplate");
 
 
-        /**String id = user.getId();
+        String id = user.getId();
         String userName = user.getUserName();
         String password = user.getPassword();
         String avatar = user.getAvatar();//头像
@@ -34,7 +34,7 @@ public class UserDao {
         int cityId = user.getCityId();//用户所在城市
         String email = user.getEmail();
         String telephone = user.getTelephone();
-**/
+/**
         String id = "2";
         String userName = "刘旺";
         String password = "2222";
@@ -44,7 +44,7 @@ public class UserDao {
         int cityId = 1;//用户所在城市
         String email = "13627227116@qq.com";
         String telephone = "18253657808";
-
+**/
         String sql = "INSERT INTO user (id, username, password, avatar, sex, province_code, city_id, email, telephone) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
         Object[] params = {id, userName, password, avatar,sex,provinceCode,cityId,email,telephone};
         int count= jdbcTemplate.update(sql, params);
@@ -55,7 +55,7 @@ public class UserDao {
         ApplicationContext ctx=new ClassPathXmlApplicationContext("bean.xml");
         JdbcTemplate jdbcTemplate=(JdbcTemplate) ctx.getBean("jdbcTemplate");
 
-        /**String id = user.getId();
+         String id = user.getId();
          String userName = user.getUserName();
          String password = user.getPassword();
          String avatar = user.getAvatar();//头像
@@ -64,7 +64,7 @@ public class UserDao {
          int cityId = user.getCityId();//用户所在城市
          String email = user.getEmail();
          String telephone = user.getTelephone();
-         **/
+         /**
         String id = "3";
         String userName = "孙hong蕾";
         String password = "222252";
@@ -74,15 +74,11 @@ public class UserDao {
         int cityId = 1;//用户所在城市
         String email = "dd7227116@qq.com";
         String telephone = "18253654444";
-
+**/
         String sql = "update user set username=?, password=?, avatar=?, sex=?,province_code=?, city_id=?, email=?, telephone=? where id=?";
         Object[] params = { userName, password, avatar,sex,provinceCode,cityId,email,telephone,id};
         int count= jdbcTemplate.update(sql, params);
         System.out.println(count);
-
-
-        //String sql="update user set username=?,password=?,telephone=? where id=?";
-        //jdbcTemplate.update(sql,new Object[]{"王永康","521","18253655555","1"});
 
     }
 
@@ -109,8 +105,7 @@ public class UserDao {
         JdbcTemplate jdbcTemplate=(JdbcTemplate) ctx.getBean("jdbcTemplate");
 
         String sql="delete from user where id=?";
-        id="2";
-        //String id=user.getId();
+        //id="2";
 
         int count= jdbcTemplate.update(sql, id);
         System.out.println(count);
