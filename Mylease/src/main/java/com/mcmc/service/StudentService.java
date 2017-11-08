@@ -17,8 +17,16 @@ public class StudentService {
     public boolean checkLogin(String userName, String password) {
         boolean flag = false;
         User user = studentDao.selectOneStudent(userName, password);
-        if(user != null)
+        if(user != null) {
+            System.out.print(userName);
+            System.out.print(password);
+            System.out.print("登陆成功");
             flag = true;
+        }
+        System.out.print(userName);
+        System.out.print(password);
+        System.out.print("登陆失败");
+
         return flag;
     }
 }
