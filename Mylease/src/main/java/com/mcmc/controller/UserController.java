@@ -2,6 +2,7 @@ package com.mcmc.controller;
 
 import com.mcmc.common.entity.User;
 import com.mcmc.dao.StudentDao;
+import com.mcmc.dao.UserDao;
 import com.mcmc.service.StudentService;
 
 
@@ -43,28 +44,29 @@ public class UserController {
     @RequestMapping("/seeUser")
     @ResponseBody
 
-//    public List<User> lselectAllUser(){
-//        List<User> list = studentDao.selectAllUser();
-//        System.out.println(list.get(0).getPassword());
+    //public List<User> lselectAllUser(){
+       //List<User> list = studentDao.selectAllUser();
+       //System.out.println(list.get(0).getPassword());
         //JSONObject json = new JSONObject();
         //json.put("allUser", list);
         //String json="{\"data\":" + JSONArray.fromObject(list) + "}";
         //String json="{"+JSONArray.fromObject(list) + "}";
-//        return list;
-//        JSONObject obj = new JSONObject();
-//        obj.put("list", list);
-//        return obj.toString();
+        //return list;
+        //JSONObject obj = new JSONObject();
+        //obj.put("list", list);
+        //return obj.toString();
     public JSONObject selectAllUser(){
-//        List<User> list = studentDao.selectAllUser();
-//        System.out.println(list.get(0).getPassword());
-        //JSONObject json = new JSONObject();
-        //json.put("allUser", list);
-        //String json="{\"data\":" + JSONArray.fromObject(list) + "}";
-//        String json="{"+JSONArray.fromObject(list) + "}";
-
+        UserDao userDao=new UserDao();
+        List<User> list =userDao.selectAllUser();
+        //System.out.println(list.get(0).getPassword());
         JSONObject json = new JSONObject();
-        json.put("username","swillion");
-        json.put("password","123456");
+        json.put("allUser", list);
+        //String json="{\"data\":" + JSONArray.fromObject(list) + "}";
+        //String json="{"+JSONArray.fromObject(list) + "}";
+
+        //JSONObject json = new JSONObject();
+        //json.put("username","swillion");
+        //json.put("password","123456");
         return json;
 
 
