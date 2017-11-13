@@ -26,6 +26,7 @@ public class GoodsService {
         List<Goods> list = goodsDao.selectAllLeaseGoods();
         return list;
     }
+
     public List<Goods> sellectAllGoods(){
         List<Goods> list = goodsDao.selectAllGoods();
         return list;
@@ -34,4 +35,12 @@ public class GoodsService {
         List<Goods> list=goodsDao.selectGoodsByUserId(userId);
         return list;
     }
+
+
+    public List<Goods> selectWithCondition(String goodsName, String goodsDealType, String goodsType, double lowPrice, double highPrice) {
+        List<Goods> goodsList = goodsDao.selectWithCondition(goodsName, goodsDealType, goodsType, lowPrice, highPrice);
+        return goodsList;
+    }
+
+
 }
