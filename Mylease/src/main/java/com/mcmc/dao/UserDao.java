@@ -82,7 +82,24 @@ public class UserDao {
 
     }
 
-    @RequestMapping("/select")
+    public List<User> selectUserByName(String username){
+        ApplicationContext ctx=new ClassPathXmlApplicationContext("bean.xml");
+        JdbcTemplate jdbcTemplate=(JdbcTemplate) ctx.getBean("jdbcTemplate");
+
+        String sql="select * from user where username=?";
+
+        RowMapper<User> rowMapper=new BeanPropertyRowMapper<User>(User.class);
+        List<User> list = null;
+        try{
+            list = jdbcTemplate.query(sql,rowMapper,username);
+            System.out.println(list);
+        }catch (EmptyResultDataAccessException e){
+            System.out.println("Select Failed ");
+        }
+        return list;
+    }
+
+
     public List<User> selectAllUser(){
         ApplicationContext ctx=new ClassPathXmlApplicationContext("bean.xml");
         JdbcTemplate jdbcTemplate=(JdbcTemplate) ctx.getBean("jdbcTemplate");

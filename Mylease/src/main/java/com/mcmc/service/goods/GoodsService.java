@@ -21,8 +21,17 @@ public class GoodsService {
      * 查询所有==租赁商品
      * @return
      */
+
     public List<Goods> sellectAllLeaseGoods(){
         List<Goods> list = goodsDao.selectAllLeaseGoods();
+        return list;
+    }
+    public List<Goods> sellectAllGoods(){
+        List<Goods> list = goodsDao.selectAllGoods();
+        return list;
+    }
+    public List<Goods> selectGoodsByUserId(String userId){
+        List<Goods> list=goodsDao.selectGoodsByUserId(userId);
         return list;
     }
 }

@@ -2,9 +2,12 @@ package com.mcmc.service;
 
 import com.mcmc.common.entity.User;
 import com.mcmc.dao.StudentDao;
+import com.mcmc.dao.UserDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * Created by sunlei on 2017/10/12.
@@ -28,5 +31,17 @@ public class StudentService {
         System.out.print("登陆失败");
 
         return flag;
+    }
+
+    public List<User> selectAllUser(){
+        UserDao userDao=new UserDao();
+        List<User> list=userDao.selectAllUser();
+        return list;
+    }
+    public List<User> selectUserByName(String username){
+        UserDao userDao=new UserDao();
+        List<User> list=userDao.selectUserByName(username);
+        System.out.print("+++");
+        return list;
     }
 }

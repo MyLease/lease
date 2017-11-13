@@ -1,4 +1,4 @@
-package com.mcmc.dao.goods;
+﻿package com.mcmc.dao.goods;
 
 import com.mcmc.common.entity.Goods;
 import com.mcmc.common.entity.User;
@@ -42,5 +42,17 @@ public class GoodsDao {
         }
         return list;
     }
+    public List<Goods> selectGoodsByUserId(String userId) {
+        String sql = "SELECT * FROM goods WHERE goods.user_id=?";
+        RowMapper<Goods> rowMapper = new BeanPropertyRowMapper<Goods>(Goods.class);
+        List<Goods> list = null;
+        try {
+            list = jdbcTemplate.query(sql, rowMapper,userId);
+        }catch (EmptyResultDataAccessException e) {
+            return null;
+        }
+        return list;
+    }
+
 
 }

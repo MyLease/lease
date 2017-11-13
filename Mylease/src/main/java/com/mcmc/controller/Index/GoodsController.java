@@ -1,7 +1,6 @@
 package com.mcmc.controller.Index;
 
 import com.mcmc.common.entity.Goods;
-import com.mcmc.dao.goods.GoodsDao;
 import com.mcmc.service.goods.GoodsService;
 import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 /**
@@ -27,12 +27,14 @@ public class GoodsController {
      */
     //@RequestMapping("/selectAllLeaseGoods")
     @ResponseBody
-    /**
-    public List<Goods> selectAllLeaseGoods(){
-        List<Goods> list = goodsService.sellectAllLeaseGoods();
-        return list;
+    @RequestMapping("/selectGoodsByUserId")
+    public JSONObject selectGoodsByUserId(Goods goods, HttpSession session){
+        List<Goods> list = goodsService.selectGoodsByUserId("1");
+        JSONObject json = new JSONObject();
+        json.put("This user's goods:", list);
+        return json;
     }
-     **/
+
     @RequestMapping("/selectAllLeaseGoods")
     public JSONObject selectAllLeaseGoods(){
         List<Goods> list=goodsService.sellectAllLeaseGoods();

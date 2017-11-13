@@ -27,10 +27,6 @@ public class UserController {
     @Autowired
     private StudentService studentService;
 
-    @Autowired
-
-    private StudentDao studentDao;
-
     @RequestMapping("/login")
     public String login(User user, HttpSession session) throws IOException {
 
@@ -56,8 +52,8 @@ public class UserController {
         //obj.put("list", list);
         //return obj.toString();
     public JSONObject selectAllUser(){
-        UserDao userDao=new UserDao();
-        List<User> list =userDao.selectAllUser();
+
+        List<User> list =studentService.selectAllUser();
         //System.out.println(list.get(0).getPassword());
         JSONObject json = new JSONObject();
         json.put("allUser", list);
@@ -68,7 +64,13 @@ public class UserController {
         //json.put("username","swillion");
         //json.put("password","123456");
         return json;
-
-
+    }
+    @RequestMapping("/selectUserByName")
+    @ResponseBody
+    public JSONObject selectUserByName(User user, HttpSession session){
+        List<User> list=studentService.selectUserByName(user.getUserName());
+        JSONObject json = new JSONObject();
+        json.put("allUser", list);
+        return json;
     }
 }
