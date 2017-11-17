@@ -42,5 +42,67 @@ public class GoodsDao {
         }
         return list;
     }
+    public List<Goods> selectGoodsByUserId(String userId) {
+        String sql = "SELECT * FROM goods WHERE goods.user_id=?";
+        RowMapper<Goods> rowMapper = new BeanPropertyRowMapper<Goods>(Goods.class);
+        List<Goods> list = null;
+        try {
+            list = jdbcTemplate.query(sql, rowMapper,userId);
+        }catch (EmptyResultDataAccessException e) {
+            return null;
+        }
+        return list;
+    }
+
+
+    /**
+     * 根据查询条件查询商品列表
+     * @param goodsName
+     * @param goodsDealType
+     * @param goodsType
+     * @param lowPrice
+     * @param highPrice
+     * @return
+     * 我倒是不建议这么写
+     */
+    public List<Goods> selectWithCondition(String goodsName, String goodsDealType, String goodsType, double lowPrice, double highPrice) {
+
+
+        String sql = "SELECT * FROM `goods` WHERE `can_show` = 1";
+
+        if(goodsName.equals("")) {
+            goodsName = null;
+        }
+        if(goodsType.equals("")) {
+            goodsType = null;
+        }
+
+        if(!(goodsName == null && goodsDealType == null && goodsType == null && lowPrice <= 0.0 &&highPrice <= 0.0)) {
+
+            if(goodsName != null) {
+                sql += " AND `goods_name` LIKE '%" + goodsName + "%'";
+            }
+            if(!goodsDealType.equals("-1")) {
+                sql += " AND `goods_deal_type` = '" + goodsDealType + "'";
+            }
+            if(goodsType != null) {
+                sql += " AND `goods_type` LIKE '%" + goodsType + "%'";
+            }
+            if(highPrice > 0.0 && lowPrice >= 0.0 && highPrice > lowPrice) {
+                sql += " AND `goods_price` BETWEEN " + lowPrice + " AND " + highPrice;
+            }
+        }
+
+        sql += " ORDER BY goods.business_num ASC";
+        RowMapper<Goods> rowMapper = new BeanPropertyRowMapper<Goods>(Goods.class);
+        List<Goods> list = null;
+        try {
+            list = jdbcTemplate.query(sql, rowMapper);
+        }catch (EmptyResultDataAccessException e) {
+            return null;
+        }
+        return list;
+    }
+
 
 }

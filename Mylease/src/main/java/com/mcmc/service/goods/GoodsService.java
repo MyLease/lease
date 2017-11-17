@@ -2,7 +2,6 @@ package com.mcmc.service.goods;
 
 import com.mcmc.common.entity.Goods;
 import com.mcmc.dao.goods.GoodsDao;
-import com.sun.org.apache.bcel.internal.generic.RETURN;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -25,4 +24,17 @@ public class GoodsService {
         List<Goods> list = goodsDao.selectAllLeaseGoods();
         return list;
     }
+
+    public List<Goods> selectGoodsByUserId(String userId){
+        List<Goods> list=goodsDao.selectGoodsByUserId(userId);
+        return list;
+    }
+
+
+    public List<Goods> selectWithCondition(String goodsName, String goodsDealType, String goodsType, double lowPrice, double highPrice) {
+        List<Goods> goodsList = goodsDao.selectWithCondition(goodsName, goodsDealType, goodsType, lowPrice, highPrice);
+        return goodsList;
+    }
+
+
 }
