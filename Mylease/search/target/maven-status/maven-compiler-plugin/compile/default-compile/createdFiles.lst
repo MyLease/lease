@@ -1,0 +1,7 @@
+com\mcmc\search\service\GoodsService.class
+com\mcmc\search\controller\GoodsController.class
+com\mcmc\search\service\impl\GoodsServiceImpl.class
+com\mcmc\search\utils\LeaseResult.class
+com\mcmc\search\pojo\Goods.class
+com\mcmc\search\mapper\GoodsMapper.class
+com\mcmc\search\utils\ExceptionUtil.class

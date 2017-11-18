@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Mylease" />
+        <module name="search" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
-      <module name="Mylease" target="1.5" />
+      <module name="Mylease" target="1.8" />
+      <module name="search" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
